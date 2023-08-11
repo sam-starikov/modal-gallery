@@ -1,0 +1,53 @@
+.overlay {
+	position: fixed;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	background-color: #1f1f1f7e;
+
+	width: 100vw;
+	height: 100vh;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+
+	z-index: 100;
+
+	opacity: 0;
+	visibility: hidden;
+	transition: 0.3s;
+}
+
+.active {
+	opacity: 1;
+	visibility: visible;
+	transition: 0.5s;
+	composes: overlay;
+}
+
+.modal {
+	width: 100%;
+	max-width: 500px;
+	max-height: 70%;
+	border-radius: 20px;
+	background-color: rgb(255, 255, 255);
+	box-shadow: 0 0 50px 10px rgba(236, 236, 236, 0.384);
+}
+
+.container {
+	display: flex;
+	flex-direction: column;
+
+	padding: 2rem;
+	max-width: 100%;
+}
+
+.container :not(:last-child) {
+	margin-bottom: 10px;
+}
+
+.btn {
+	align-self: center;
+}
